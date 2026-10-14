@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asignación de Activos | Sistémica Digital</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0B1B3D;
+      --bg-card: #15274D;
+      --bg-input: #0F2042;
+      --accent-gold: #D49B28;
+      --accent-gold-hover: #E5A93C;
+      --text-white: #FFFFFF;
+      --text-muted: #94A3B8;
+      --border-color: #233863;
+      --success-green: #10B981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-white);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container { width: 100%; max-width: 720px; margin: 0 auto; }
+
+    .header-card {
+      background: linear-gradient(145deg, #15274D, #0D1C3B);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-logo { max-height: 60px; width: auto; margin-bottom: 1rem; }
+
+    .header-card h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .header-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .security-badge {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34D399;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      margin-top: 1.2rem;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .step-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
+    .step-number {
+      background: var(--accent-gold);
+      color: var(--bg-main);
+      font-weight: 800;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-title { font-size: 1.15rem; font-weight: 700; color: var(--text-white); }
+
+    .id-box {
+      background-color: var(--bg-input);
+      border: 2px dashed var(--accent-gold);
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .id-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn-copy {
+      background-color: var(--accent-gold);
+      color: var(--bg-main);
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-copy:hover { background-color: var(--accent-gold-hover); transform: translateY(-1px); }
+
+    .btn-link {
+      display: inline-block;
+      background-color: #2563EB;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn-link:hover { background-color: #1D4ED8; }
+
+    .form-group { margin-bottom: 1.2rem; }
+    label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; color: #E2E8F0; }
+    
+    input[type="text"] {
+      width: 100%;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      color: var(--text-white);
+      font-size: 0.95rem;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 1.1rem 2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.25);
+      transition: all 0.2s;
+      margin-top: 0.5rem;
+    }
+
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 14px 25px rgba(16, 185, 129, 0.35); }
+
+    .rescue-card {
+      background: rgba(212, 155, 40, 0.05);
+      border: 1px solid rgba(212, 155, 40, 0.2);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .btn-zoom {
+      background: transparent;
+      border: 2px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 0.8rem;
+      transition: all 0.2s;
+    }
+
+    .btn-zoom:hover { background: var(--accent-gold); color: var(--bg-main); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- HEADER -->
+    <div class="header-card">
+      <img src="logo.png" alt="Sistémica Digital" class="brand-logo" onerror="this.style.display='none'">
+      <h1>Asignación de Activos Meta Ads</h1>
+      <p>Vinculación técnica oficial de permisos para gestión de campañas publicitarias.</p>
+
+      <div class="security-badge">
+        🔒 <b>Garantía de Seguridad:</b> No requerimos tus contraseñas personales ni códigos SMS/2FA. Conservás la propiedad total de tus páginas y cuentas.
+      </div>
+    </div>
+
+    <!-- PASO 1 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-number">1</div>
+        <div class="step-title">Copiá nuestro ID de Socio Comercial</div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Este número identifica a Sistémica Digital en Meta para recibir los accesos operativos:</p>
+      
+      <div class="id-box">
+        <span class="id-number" id="businessId">123456789012345</span>
+        <button class="btn-copy" onclick="copyID()" id="copyBtn">📋 Copiar ID Comercial</button>
+      </div>
+    </div>
+
+    <!-- PASO 2 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-number">2</div>
+        <div class="step-title">Ingresá a Meta Business Settings</div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Abrí el panel oficial de Meta desde tu computadora, andá a <b>Usuarios ➔ Socios</b>, tocá <b>Agregar</b> y pegá nuestro ID asignando permisos de tu Página, Instagram y Cuenta Publicitaria:
+      </p>
+      <a href="https://business.facebook.com/settings/partners" target="_blank" class="btn-link">
+        🔗 Abrir Configuración Comercial de Meta ↗
+      </a>
+    </div>
+
+    <!-- PASO 3 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-number">3</div>
+        <div class="step-title">Confirmá la Vinculación</div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
+        Completá tus datos para que nuestro equipo valide la recepción de los accesos en el panel principal:
+      </p>
+
+      <div class="form-group">
+        <label for="clientName">Nombre comercial de tu marca o empresa *</label>
+        <input type="text" id="clientName" placeholder="Ej: Estudio Jurídico Donalisio">
+      </div>
+
+      <div class="form-group">
+        <label for="clientHandle">Usuario de Instagram o Página de Facebook *</label>
+        <input type="text" id="clientHandle" placeholder="Ej: @leodonalisio / Estudio Donalisio">
+      </div>
+
+      <button type="button" class="btn-whatsapp" onclick="sendConfirmation()">
+        ✅ Confirmar Asignación por WhatsApp
+      </button>
+    </div>
+
+    <!-- BOTÓN DE RESCATE (RESCUE CARD) -->
+    <div class="rescue-card">
+      <h3 style="font-size: 1.05rem; color: var(--accent-gold);">¿Te resulta complejo o te trabaste en un paso?</h3>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem;">No te preocupes. Agendamos una breve llamada guiada de 5 minutos en Zoom/Google Meet y lo configuramos juntos compartiendo pantalla.</p>
+      <button class="btn-zoom" onclick="requestZoomHelp()">🎥 Solicitar Asistencia en Vivo (Zoom 5 min)</button>
+    </div>
+
+  </div>
+
+  <script>
+    function copyID() {
+      const idText = document.getElementById('businessId').innerText;
+      navigator.clipboard.writeText(idText).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.innerText = '✓ ID Copiado!';
+        btn.style.backgroundColor = '#10B981';
+        btn.style.color = '#FFFFFF';
+        setTimeout(() => {
+          btn.innerText = '📋 1638273407292934';
+          btn.style.backgroundColor = 'var(--accent-gold)';
+          btn.style.color = 'var(--bg-main)';
+        }, 3000);
+      });
+    }
+
+    function sendConfirmation() {
+      const name = document.getElementById('clientName').value.trim();
+      const handle = document.getElementById('clientHandle').value.trim();
+
+      if(!name || !handle) {
+        alert('Por favor completá el nombre de tu empresa y usuario antes de confirmar.');
+        return;
+      }
+
+      let text = `*CONFIRMACIÓN DE ACTIVOS - SISTÉMICA DIGITAL*\n\n`;
+      text += `• *Empresa/Cliente:* ${name}\n`;
+      text += `• *Redes/Página:* ${handle}\n`;
+      text += `• *Estado:* Asignación realizada como Socio Comercial en Meta Ads.\n\n`;
+      text += `Quedo a la espera de la validación del equipo técnico para iniciar la campaña.`;
+
+      const phone = '5492213637222';
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    function requestZoomHelp() {
+      const text = `Hola equipo de Sistémica Digital. Necesito ayuda técnica para asignar los activos de Meta Ads. ¿Podemos coordinar un breve Zoom guiado de 5 minutos para resolverlo juntos?`;
+      const phone = '5492213637222';
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
