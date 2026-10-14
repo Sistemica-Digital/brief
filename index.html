@@ -19,7 +19,6 @@
       --bg-main: #0B1B3D;
       --bg-card: #15274D;
       --accent-gold: #D49B28;
-      --accent-gold-hover: #E5A93C;
       --text-white: #FFFFFF;
       --text-muted: #94A3B8;
       --border-color: #233863;
@@ -54,12 +53,14 @@
     p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
 
     .btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background: var(--accent-gold);
       color: #0B1B3D;
       text-decoration: none;
       font-weight: 800;
-      padding: 1rem 1.5rem;
+      padding: 1rem 1.2rem;
       border-radius: 12px;
       margin-bottom: 1rem;
       transition: all 0.2s ease;
@@ -73,6 +74,20 @@
       box-shadow: none;
     }
 
+    .step-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: rgba(11, 27, 61, 0.2);
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .btn-secondary .step-tag {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+    }
+
     .btn:hover { transform: translateY(-2px); opacity: 0.95; }
     .btn-secondary:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
   </style>
@@ -81,11 +96,20 @@
   <div class="card">
     <img src="logo.png" alt="Sistémica Digital" class="brand-logo" onerror="this.style.display='none'">
     <h1>Sistémica Digital</h1>
-    <p>Infraestructura, campañas de alto rendimiento y automatización para negocios B2B y E-commerce.</p>
+    <p>Portal de Onboarding e Infraestructura de Captación para Clientes</p>
     
-    <a href="./brief/" class="btn">📋 Completar Brief Estratégico</a>
-    <a href="./acceso/" class="btn btn-secondary">🔒 Asignación de Activos Meta Ads</a>
-    <a href="./terminos/" class="btn btn-secondary">📜 Términos y Condiciones del Servicio</a>
+    <a href="./brief/" class="btn">
+      <span>📋 Completar Brief Estratégico</span>
+      <span class="step-tag">Paso 1</span>
+    </a>
+    <a href="./acceso/" class="btn btn-secondary">
+      <span>🔒 Asignación de Activos Meta Ads</span>
+      <span class="step-tag">Paso 2</span>
+    </a>
+    <a href="./terminos/" class="btn btn-secondary">
+      <span>📜 Términos y Condiciones</span>
+      <span class="step-tag">Paso 3</span>
+    </a>
   </div>
 </body>
 </html>
