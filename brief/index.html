@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brief Estratégico | Sistémica Digital</title>
 
-  <!-- META TAGS PARA WHATSAPP (Usa tu logo.png) -->
+  <!-- META TAGS PARA VISTA PREVIA EN WHATSAPP (OPEN GRAPH) -->
   <meta property="og:title" content="Brief Estratégico de Captación | Sistémica Digital">
-  <meta property="og:description" content="Completá las 13 preguntas clave para diseñar tu ecosistema de atracción de clientes en Meta Ads.">
-  <meta property="og:image" content="logo.png">
+  <meta property="og:description" content="Completá las 13 preguntas clave para diseñar tu ecosistema de atracción de clientes y campañas de alto rendimiento en Meta Ads.">
+  <meta property="og:image" content="../logo.png">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="icon" type="image/png" href="../logo.png">
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -237,10 +237,10 @@
 
   <div class="container">
     
-    <!-- HEADER CARD CON TU LOGO -->
+    <!-- HEADER CARD CON LOGO EN RUTA RELATIVA APUNTANDO A LA RAÍZ -->
     <div class="header-card">
       <div class="logo-container">
-        <img src="logo.png" alt="Sistémica Digital" class="brand-logo">
+        <img src="../logo.png" alt="Sistémica Digital" class="brand-logo" onerror="this.onerror=null; this.src='logo.png';">
       </div>
       <h1>Brief Estratégico de Captación</h1>
       <p>Completá estas 13 preguntas clave para diseñar tu ecosistema de atracción de clientes y campañas de alto rendimiento en Meta Ads.</p>
@@ -291,7 +291,7 @@
 
         <div class="form-group">
           <label for="q6">6. ¿Cuál es el precio actual o ticket promedio de ese servicio? *</label>
-          <input type="text" id="q6" required placeholder="Ej: Honorarios mínimos por caso o consulta inicial \$X">
+          <input type="text" id="q6" required placeholder="Ej: Honorarios mínimos por caso o consulta inicial $X">
         </div>
 
         <div class="form-group">
@@ -344,7 +344,7 @@
 
         <div class="form-group">
           <label for="q13">13. Presupuesto mensual estimado que tenés pensado destinar a pauta publicitaria *</label>
-          <input type="text" id="q13" required placeholder="Ej: \$100.000 a \$150.000 ARS mensuales para arrancar">
+          <input type="text" id="q13" required placeholder="Ej: $100.000 a $150.000 ARS mensuales para arrancar">
         </div>
       </div>
 
@@ -386,32 +386,11 @@
 
       let text = `*BRIEF ESTRATÉGICO - SISTÉMICA DIGITAL*\n\n`;
       text += `*1. DATOS DEL NEGOCIO*\n`;
-      text += `• Marca/Responsable: ${q1}\n`;
-      text += `• WhatsApp/Email: ${q2}\n`;
-      text += `• Redes/Web: ${q3 || 'No especificado'}\n`;
-      text += `• Zona/Horario: ${q4}\n\n`;
+      text += `• Marca/Responsable: \${q1}\n`;
+      text += `• WhatsApp/Email: \${q2}\n`;
+      text += `• Redes/Web: \${q3 || 'No especificado'}\n`;
+      text += `• Zona/Horario: \${q4}\n\n`;
 
       text += `*2. OFERTA Y SERVICIO*\n`;
-      text += `• Servicio prioritario: ${q5}\n`;
-      text += `• Ticket promedio: ${q6}\n`;
-      text += `• Oferta gancho: ${q7}\n\n`;
-
-      text += `*3. CLIENTE Y COMPETENCIA*\n`;
-      text += `• Cliente ideal: ${q8}\n`;
-      text += `• Diferencial: ${q9}\n`;
-      text += `• Competencia: ${q10 || 'No especificado'}\n\n`;
-
-      text += `*4. PROCESO COMERCIAL E INVERSIÓN*\n`;
-      text += `• Atención/Respuesta: ${q11}\n`;
-      text += `• Exp. Meta Ads: ${q12}\n`;
-      text += `• Presupuesto mensual: ${q13}`;
-
-      const phone = '5492213637222';
-      const encodedText = encodeURIComponent(text);
-      const waUrl = `https://wa.me/${phone}?text=${encodedText}`;
-
-      window.open(waUrl, '_blank');
-    }
-  </script>
-</body>
-</html>
+      text += `• Servicio prioritario: \${q5}\n`;
+      text += `• Ticket promedio: \${q6
