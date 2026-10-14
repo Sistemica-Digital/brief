@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones de Servicio | Sistémica Digital</title>
+
+  <!-- META TAGS PARA VISTA PREVIA EN WHATSAPP Y REDES SOCIALES -->
+  <meta property="og:title" content="Términos y Condiciones de Servicio | Sistémica Digital">
+  <meta property="og:description" content="Marco legal, operativo y condiciones generales de prestación de servicios de marketing digital, automatización y captación.">
+  <meta property="og:image" content="../logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../logo.png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0B1B3D;
+      --bg-card: #15274D;
+      --bg-input: #0F2042;
+      --accent-gold: #D49B28;
+      --accent-gold-hover: #E5A93C;
+      --text-white: #FFFFFF;
+      --text-muted: #94A3B8;
+      --border-color: #233863;
+      --success-green: #10B981;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-white);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container { width: 100%; max-width: 820px; margin: 0 auto; }
+
+    .header-card {
+      background: linear-gradient(145deg, #15274D, #0D1C3B);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-logo { max-height: 65px; width: auto; object-fit: contain; margin-bottom: 1rem; }
+
+    .header-card h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .header-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .legal-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .clause-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.4rem;
+    }
+
+    .clause-body {
+      font-size: 0.92rem;
+      color: #E2E8F0;
+      text-align: justify;
+    }
+
+    .clause-body p { margin-bottom: 0.8rem; }
+    .clause-body ul { margin-left: 1.2rem; margin-bottom: 0.8rem; }
+    .clause-body li { margin-bottom: 0.3rem; }
+
+    .acceptance-card {
+      background: linear-gradient(145deg, #15274D, #0F2042);
+      border: 2px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      box-shadow: 0 10px 30px rgba(212, 155, 40, 0.15);
+    }
+
+    .acceptance-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-white);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-group { margin-bottom: 1.2rem; }
+    label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; color: #E2E8F0; }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      color: var(--text-white);
+      font-size: 0.95rem;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 1.5rem 0;
+      background: rgba(11, 27, 61, 0.6);
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--accent-gold);
+      cursor: pointer;
+    }
+
+    .checkbox-label {
+      font-size: 0.88rem;
+      color: #E2E8F0;
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--accent-gold), #B8821B);
+      color: #050E21;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 1.1rem 2rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(212, 155, 40, 0.3);
+      transition: all 0.2s;
+    }
+
+    .btn-submit:hover {
+      background: linear-gradient(135deg, var(--accent-gold-hover), var(--accent-gold));
+      transform: translateY(-2px);
+    }
+
+    .footer-text {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      .header-card, .legal-card, .acceptance-card { padding: 1.5rem 1.2rem; }
+      .header-card h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER CARD -->
+    <div class="header-card">
+      <img src="../logo.png" alt="Sistémica Digital" class="brand-logo" onerror="this.onerror=null; this.src='logo.png';">
+      <h1>Términos y Condiciones Generales de Servicio</h1>
+      <p>Sistémica Digital — Marco Legal, Operativo y Condiciones Generales de Contratación</p>
+    </div>
+
+    <!-- DOCUMENTO LEGAL -->
+    <div class="legal-card">
+      <div class="clause-body">
+        <p>El presente documento establece las Condiciones Generales de Servicio aplicables a las contrataciones celebradas entre <b>SISTÉMICA DIGITAL</b>, representada por <b>Javier Hernán López</b>, con domicilio operativo y legal en la Ciudad de La Plata, Provincia de Buenos Aires, Argentina (en adelante, <b>“LA AGENCIA”</b>), y la persona física o jurídica que solicite o contrate los servicios (en adelante, <b>“EL CLIENTE”</b>).</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 1 -->
+    <div class="legal-card">
+      <div class="clause-title">1. Objeto y alcance</div>
+      <div class="clause-body">
+        <p>LA AGENCIA prestará a EL CLIENTE servicios profesionales de marketing digital, pauta publicitaria, generación de oportunidades comerciales, diseño de embudos de captación, automatizaciones, sistemas de seguimiento comercial y/o desarrollo de activos digitales, según lo detallado en la Propuesta Comercial o presupuesto aceptado.</p>
+        <p>La Propuesta Comercial forma parte integrante del presente marco contractual. Cualquier tarea, integración, desarrollo o plataforma no incluida expresamente en dicha propuesta quedará fuera del alcance y podrá presupuestarse de forma independiente.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 2 -->
+    <div class="legal-card">
+      <div class="clause-title">2. Duración e inicio del servicio</div>
+      <div class="clause-body">
+        <p>El servicio tendrá una duración inicial de treinta (30) días corridos, salvo que la Propuesta Comercial establezca otro plazo. El período comenzará a computarse desde la acreditación efectiva del pago inicial correspondiente.</p>
+        <p>Para iniciar la implementación o publicación efectiva, EL CLIENTE deberá proporcionar en tiempo y forma: Brief Estratégico, accesos a activos digitales, materiales requeridos, información comercial actualizada y métodos de pago activos en plataformas publicitarias.</p>
+        <p>Los retrasos causados por falta de información, accesos o aprobaciones imputables a EL CLIENTE no extenderán automáticamente el período contratado ni generarán derecho a reembolsos o reclamos por demoras.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 3 -->
+    <div class="legal-card">
+      <div class="clause-title">3. Honorarios, forma de pago y actualización</div>
+      <div class="clause-body">
+        <p>EL CLIENTE abonará por adelantado los honorarios profesionales acordados en la Propuesta Comercial para iniciar o continuar las tareas del período correspondientes.</p>
+        <p>Los pagos corresponden al tiempo profesional, conocimiento, estrategia, implementación técnica y derecho de uso funcional de los sistemas prestados. Una vez iniciado el trabajo operativo, los importes abonados no serán reembolsables.</p>
+        <p><b>Actualización de honorarios:</b> En contrataciones recurrentes que se extiendan por más de sesenta (60) días corridos, los honorarios mensuales podrán ser revisados y actualizados en función de variaciones de costos operativos o índices de inflación acumulados, notificando a EL CLIENTE con al menos diez (10) días de anticipación al inicio del nuevo período.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 4 -->
+    <div class="legal-card">
+      <div class="clause-title">4. Infraestructura y sistemas de LA AGENCIA</div>
+      <div class="clause-body">
+        <p>LA AGENCIA podrá utilizar infraestructura propia o contratada (sistemas CRM, herramientas de automatización, integraciones de WhatsApp, flujos de seguimiento, plantillas, prompts y agentes de Inteligencia Artificial).</p>
+        <p>EL CLIENTE adquiere el derecho de <b>uso funcional</b> de dichos componentes durante la vigencia del servicio y mientras mantenga sus pagos al día. Esto no implica transferencia de propiedad, licencia perpetua, titularidad de código fuente, derecho de copia o reventa una vez finalizada la relación comercial.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 5 -->
+    <div class="legal-card">
+      <div class="clause-title">5. Propiedad intelectual y metodologías</div>
+      <div class="clause-body">
+        <p>Metodologías, frameworks, estructuras operativas, arquitecturas de CRM, flujos reutilizables, agentes de IA, prompts y códigos fuente base continuarán siendo propiedad exclusiva de LA AGENCIA.</p>
+        <p>Los materiales desarrollados específicamente para EL CLIENTE (diseños y textos publicitarios para sus campañas) podrán ser utilizados por este una vez cumplidas las obligaciones de pago correspondientes.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 6 -->
+    <div class="legal-card">
+      <div class="clause-title">6. CRM, WhatsApp y datos comerciales</div>
+      <div class="clause-body">
+        <p>La conexión con WhatsApp y sistemas de automatización estará disponible únicamente durante la vigencia del servicio contratado. Ante falta de pago o finalización del contrato, LA AGENCIA podrá suspender o retirar los accesos funcionales a dichos sistemas.</p>
+        <p><b>Exportación de datos:</b> Los contactos y leads generados son propiedad de EL CLIENTE. En caso de finalización del servicio, EL CLIENTE podrá solicitar la exportación de su base de contactos en formato estándar (.CSV / Excel) de los campos nativos disponibles.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 7 -->
+    <div class="legal-card">
+      <div class="clause-title">7. Hosting y dominio</div>
+      <div class="clause-body">
+        <p>En caso de requerirse landing pages externas o sitios web propios, EL CLIENTE será responsable de contratar y abonar directamente los costos de dominio, hosting y licencias premium externas.</p>
+        <p>LA AGENCIA no será responsable por caídas, vencimientos o bloqueos ocasionados por falta de pago o fallas del proveedor de hosting o dominio contratado por EL CLIENTE.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 8 -->
+    <div class="legal-card">
+      <div class="clause-title">8. Inversión publicitaria</div>
+      <div class="clause-body">
+        <p>La inversión destinada a campañas en Meta Ads, Google Ads u otras plataformas es 100% independiente de los honorarios de LA AGENCIA. EL CLIENTE abonará directamente a las plataformas el presupuesto publicitario mediante sus propios medios de pago (tarjeta de crédito/débito).</p>
+        <p>LA AGENCIA no custodia ni administra fondos de pauta publicitaria. Rechazos de tarjetas, falta de saldo o restricciones en la cuenta publicitaria del cliente no serán responsabilidad de LA AGENCIA.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 9 -->
+    <div class="legal-card">
+      <div class="clause-title">9. Titularidad de activos del cliente</div>
+      <div class="clause-body">
+        <p>EL CLIENTE conserva en todo momento la titularidad exclusiva de sus activos comerciales (Página de Facebook, Instagram, Cuenta Publicitaria, Píxeles, WhatsApp y base de datos). LA AGENCIA recibe únicamente accesos delegados operativos vía Socio Comercial (Partner ID). LA AGENCIA nunca solicitará contraseñas personales ni códigos 2FA/SMS.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 10 Y 11 -->
+    <div class="legal-card">
+      <div class="clause-title">10. Obligaciones y aprobaciones de EL CLIENTE</div>
+      <div class="clause-body">
+        <p>EL CLIENTE se compromete a: entregar información verídica, completar el Brief Estratégico, designar a un responsable comercial para atender rápidamente las consultas generadas y mantener habilitados sus medios de pago publicitarios.</p>
+        <p>Las validaciones de ofertas, textos y precios se realizarán mediante WhatsApp o correo electrónico. Una vez aprobado un material, modificaciones posteriores que excedan lo planificado podrán presupuestarse por separado.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 12 Y 13 -->
+    <div class="legal-card">
+      <div class="clause-title">11. Alcance y servicios NO incluidos</div>
+      <div class="clause-body">
+        <p>El servicio abarca exclusivamente lo definido en la Propuesta Comercial. Salvo contratación expresa, el servicio <b>NO incluye:</b> presupuesto publicitario, Community Management orgánico, moderación permanente de comentarios, respuesta manual de chats, cierres de venta, producción audiovisual presencial, SEO, desarrollo de software a medida ni licencias externas.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 14 Y 15 -->
+    <div class="legal-card">
+      <div class="clause-title">12. Responsabilidad y plataformas de terceros</div>
+      <div class="clause-body">
+        <p>LA AGENCIA ejecuta los servicios con la máxima diligencia profesional y técnica. EL CLIENTE reconoce que los resultados comerciales finales (ventas, cierres, facturación) dependen de factores ajenos a LA AGENCIA, tales como la atención comercial del cliente, la calidad del producto/servicio, la oferta, el precio y el mercado. La obligación de LA AGENCIA es de <b>medios profesionales</b> y no de resultado comercial final.</p>
+        <p>LA AGENCIA no será responsable por caídas generales, bloqueos preventivos, cambios de algoritmo o revisiones de anuncios por parte de plataformas externas como Meta, Google o WhatsApp.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 16 Y 17 -->
+    <div class="legal-card">
+      <div class="clause-title">13. Horarios de atención y suspensión por falta de pago</div>
+      <div class="clause-body">
+        <p><b>Horario operativo:</b> Lunes a viernes de 09:00 a 19:00 hs. Sábados de 09:00 a 13:00 hs (Hora Argentina, GMT-3). Domingos y feriados no se consideran días hábiles operativos.</p>
+        <p>La falta de acreditación de los pagos correspondientes habilitará a LA AGENCIA a suspender la gestión de campañas, automatizaciones y soportes hasta que la deuda sea regularizada.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 18 A 22 -->
+    <div class="legal-card">
+      <div class="clause-title">14. Finalización, confidencialidad y aceptación</div>
+      <div class="clause-body">
+        <p>Cualquiera de las partes podrá dar por finalizado el servicio al concluir el período abonado notificando por canal escrito. Ambas partes mantendrán estricta confidencialidad sobre la información comercial y estratégica compartida.</p>
+        <p><b>Conformidad:</b> La aceptación de la Propuesta Comercial, el pago inicial del servicio y/o la confirmación digital en esta web implican la lectura, comprensión y aceptación total de los presentes Términos y Condiciones Generales.</p>
+      </div>
+    </div>
+
+    <!-- CLAUSULA 23 -->
+    <div class="legal-card">
+      <div class="clause-title">15. Jurisdicción aplicable</div>
+      <div class="clause-body">
+        <p>Para cualquier controversia derivada de la interpretación o ejecución de las presentes condiciones, las partes se someterán a la jurisdicción de los <b>Tribunales Ordinarios de la Ciudad de La Plata, Provincia de Buenos Aires, Argentina</b>.</p>
+      </div>
+    </div>
+
+    <!-- FORMULARIO DE ACEPTACIÓN DIGITAL -->
+    <div class="acceptance-card">
+      <div class="acceptance-title">Aceptación y Conformidad Digital</div>
+      <p style="color: var(--text-muted); font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem;">
+        Completá tus datos para registrar la aceptación formal de las condiciones operativas de Sistémica Digital:
+      </p>
+
+      <div class="form-group">
+        <label for="clientName">Nombre / Razón Social del Cliente *</label>
+        <input type="text" id="clientName" placeholder="Ej: Estudio Jurídico Donalisio">
+      </div>
+
+      <div class="form-group">
+        <label for="clientTaxId">CUIT / DNI del Cliente *</label>
+        <input type="text" id="clientTaxId" placeholder="Ej: 20-30405060-9 / 30405060">
+      </div>
+
+      <div class="form-group">
+        <label for="clientEmail">Correo Electrónico de Contacto *</label>
+        <input type="email" id="clientEmail" placeholder="Ej: leodonalisio@hotmail.com">
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="acceptTerms">
+        <label for="acceptTerms" class="checkbox-label">
+          He leído, comprendido y acepto en su totalidad los <b>Términos y Condiciones Generales de Servicio</b> de Sistémica Digital para la ejecución de nuestro proyecto.
+        </label>
+      </div>
+
+      <button type="button" class="btn-submit" onclick="submitAcceptance()">
+        ✅ Confirmar Aceptación por WhatsApp
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    function submitAcceptance() {
+      const name = document.getElementById('clientName').value.trim();
+      const taxId = document.getElementById('clientTaxId').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const checked = document.getElementById('acceptTerms').checked;
+
+      if(!name || !taxId || !email) {
+        alert('Por favor completá todos los campos requeridos (Nombre, CUIT/DNI y Email).');
+        return;
+      }
+
+      if(!checked) {
+        alert('Debes tildar la casilla para confirmar la aceptación de los Términos y Condiciones.');
+        return;
+      }
+
+      let text = `*ACEPTACIÓN DE TÉRMINOS Y CONDICIONES - SISTÉMICA DIGITAL*\n\n`;
+      text += `• *Cliente/Empresa:* ${name}\n`;
+      text += `• *CUIT/DNI:* ${taxId}\n`;
+      text += `• *Email:* ${email}\n`;
+      text += `• *Estado:* Aceptado y confirmado digitalmente.\n\n`;
+      text += `Doy mi conformidad legal a los Términos y Condiciones Generales de Servicio de Sistémica Digital.`;
+
+      const phone = '5492213637222';
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
