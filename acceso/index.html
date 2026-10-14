@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asignación de Activos | Sistémica Digital</title>
   
+  <!-- META TAGS PARA VISTA PREVIA EN WHATSAPP Y REDES SOCIALES -->
+  <meta property="og:title" content="Asignación de Activos Meta Ads | Sistémica Digital">
+  <meta property="og:description" content="Vinculación técnica oficial de permisos para gestión de campañas publicitarias en Meta Ads.">
+  <meta property="og:image" content="../logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../logo.png">
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -48,7 +58,15 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
-    .brand-logo { max-height: 60px; width: auto; margin-bottom: 1rem; }
+    .logo-container {
+      margin-bottom: 1rem;
+    }
+
+    .brand-logo { 
+      max-height: 65px; 
+      width: auto; 
+      object-fit: contain;
+    }
 
     .header-card h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
     .header-card p { color: var(--text-muted); font-size: 0.95rem; }
@@ -194,7 +212,9 @@
     
     <!-- HEADER -->
     <div class="header-card">
-      <img src="logo.png" alt="Sistémica Digital" class="brand-logo" onerror="this.style.display='none'">
+      <div class="logo-container">
+        <img src="../logo.png" alt="Sistémica Digital" class="brand-logo" onerror="this.onerror=null; this.src='logo.png';">
+      </div>
       <h1>Asignación de Activos Meta Ads</h1>
       <p>Vinculación técnica oficial de permisos para gestión de campañas publicitarias.</p>
 
@@ -212,7 +232,7 @@
       <p style="color: var(--text-muted); font-size: 0.9rem;">Este número identifica a Sistémica Digital en Meta para recibir los accesos operativos:</p>
       
       <div class="id-box">
-        <span class="id-number" id="businessId">123456789012345</span>
+        <span class="id-number" id="businessId">1175601811359318</span>
         <button class="btn-copy" onclick="copyID()" id="copyBtn">📋 Copiar ID Comercial</button>
       </div>
     </div>
@@ -274,7 +294,7 @@
         btn.style.backgroundColor = '#10B981';
         btn.style.color = '#FFFFFF';
         setTimeout(() => {
-          btn.innerText = '📋 1175601811359318';
+          btn.innerText = '📋 Copiar ID Comercial';
           btn.style.backgroundColor = 'var(--accent-gold)';
           btn.style.color = 'var(--bg-main)';
         }, 3000);
