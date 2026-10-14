@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brief Estratégico | Sistémica Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0B1B3D;
+      --bg-card: #15274D;
+      --bg-input: #0F2042;
+      --accent-gold: #D49B28;
+      --accent-gold-hover: #E5A93C;
+      --text-white: #FFFFFF;
+      --text-muted: #94A3B8;
+      --border-color: #233863;
+      --focus-ring: #D49B28;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-white);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: linear-gradient(145deg, #15274D, #0D1C3B);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(212, 155, 40, 0.1);
+      border: 1px solid rgba(212, 155, 40, 0.3);
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 1.2rem;
+    }
+
+    .logo-badge span {
+      color: var(--accent-gold);
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .header-card h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(135deg, #FFFFFF 60%, #94A3B8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .section-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.8rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-number {
+      background: var(--accent-gold);
+      color: var(--bg-main);
+      font-weight: 800;
+      font-size: 0.9rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .form-group {
+      margin-bottom: 1.6rem;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #E2E8F0;
+    }
+
+    .label-hint {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      font-style: italic;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      background-color: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      color: var(--text-white);
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--focus-ring);
+      box-shadow: 0 0 0 3px rgba(212, 155, 40, 0.15);
+      background-color: #12244B;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    ::placeholder {
+      color: #475569;
+    }
+
+    .submit-container {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--accent-gold), #B8821B);
+      color: #050E21;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 10px 25px rgba(212, 155, 40, 0.3);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit:hover {
+      background: linear-gradient(135deg, var(--accent-gold-hover), var(--accent-gold));
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(212, 155, 40, 0.4);
+    }
+
+    .footer-text {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem; }
+      .header-card, .section-card { padding: 1.5rem 1.2rem; }
+      .header-card h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- HEADER CARD -->
+    <div class="header-card">
+      <div class="logo-badge">
+        <span>SISTÉMICA DIGITAL</span>
+      </div>
+      <h1>Brief Estratégico de Captación</h1>
+      <p>Completá estas 13 preguntas clave para diseñar tu ecosistema de atracción de clientes y campañas de alto rendimiento en Meta Ads.</p>
+    </div>
+
+    <form id="briefForm">
+      
+      <!-- SECCIÓN 1 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">1</div>
+          <div class="section-title">Datos del Negocio y Contacto</div>
+        </div>
+
+        <div class="form-group">
+          <label for="q1">1. Nombre comercial de la marca / empresa y persona responsable *</label>
+          <input type="text" id="q1" required placeholder="Ej: Estudio Jurídico Donalisio - Dr. Leonardo Donalisio">
+        </div>
+
+        <div class="form-group">
+          <label for="q2">2. Teléfono / WhatsApp de contacto y correo electrónico *</label>
+          <input type="text" id="q2" required placeholder="Ej: +54 9 3571 56-2361 / leotancacha@hotmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="q3">3. Enlaces a redes sociales actuales y sitio web (si tenés)</label>
+          <input type="text" id="q3" placeholder="Ej: instagram.com/leodonalisio">
+        </div>
+
+        <div class="form-group">
+          <label for="q4">4. Zona geográfica objetivo y horario de atención habitual *</label>
+          <input type="text" id="q4" required placeholder="Ej: Río Tercero, Tancacha y zona / Lunes a Viernes de 8 a 17 hs">
+        </div>
+      </div>
+
+      <!-- SECCIÓN 2 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">2</div>
+          <div class="section-title">Oferta y Servicio Principal</div>
+        </div>
+
+        <div class="form-group">
+          <label for="q5">5. ¿Cuál es el producto o servicio principal que querés promocionar? *</label>
+          <span class="label-hint">Elegí el servicio más rentable o el que más te interese escalar en este momento.</span>
+          <textarea id="q5" required placeholder="Ej: Asesoría legal integral para empresas y derecho laboral/accidentes."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="q6">6. ¿Cuál es el precio actual o ticket promedio de ese servicio? *</label>
+          <input type="text" id="q6" required placeholder="Ej: Honorarios mínimos por caso o consulta inicial \$X">
+        </div>
+
+        <div class="form-group">
+          <label for="q7">7. ¿Tenés o podrías ofrecer una oferta gancho o beneficio inicial? *</label>
+          <span class="label-hint">Ej: Primera evaluación del caso sin cargo, diagnóstico expreso, cupos limitados.</span>
+          <textarea id="q7" required placeholder="Ej: Primera consulta de evaluación del caso sin costo inicial."></textarea>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 3 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">3</div>
+          <div class="section-title">Cliente Ideal y Competencia</div>
+        </div>
+
+        <div class="form-group">
+          <label for="q8">8. ¿Quién es tu cliente ideal y qué problema urgente busca resolver? *</label>
+          <textarea id="q8" required placeholder="Ej: Personas con conflictos laborales/familiares o pymes de la zona que necesitan blindaje legal."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="q9">9. ¿Por qué un cliente debería elegirte a vos y no a la competencia? *</label>
+          <span class="label-hint">Tu diferencial principal.</span>
+          <textarea id="q9" required placeholder="Ej: Atención personalizada directa con el titular, respuesta rápida y asesoría clara sin modismos."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="q10">10. Nómbranos 2 o 3 competidores directos o referencias de tu zona</label>
+          <input type="text" id="q10" placeholder="Ej: Estudios jurídicos de la zona o referentes del rubro">
+        </div>
+      </div>
+
+      <!-- SECCIÓN 4 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">4</div>
+          <div class="section-title">Proceso Comercial e Inversión</div>
+        </div>
+
+        <div class="form-group">
+          <label for="q11">11. ¿Quién atiende las consultas que ingresan y cuál es el tiempo de respuesta? *</label>
+          <input type="text" id="q11" required placeholder="Ej: Yo mismo por WhatsApp / Respondemos en menos de 1 hora">
+        </div>
+
+        <div class="form-group">
+          <label for="q12">12. ¿Realizaste pauta publicitaria en Meta Ads anteriormente? ¿Cómo te fue? *</label>
+          <textarea id="q12" required placeholder="Ej: No, nunca hice pauta formal / O intenté con botón promocionar sin éxito."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="q13">13. Presupuesto mensual estimado que tenés pensado destinar a pauta publicitaria *</label>
+          <input type="text" id="q13" required placeholder="Ej: \$100.000 a \$150.000 ARS mensuales para arrancar">
+        </div>
+      </div>
+
+      <!-- SUBMIT BUTTON -->
+      <div class="submit-container">
+        <button type="button" class="btn-submit" onclick="sendToWhatsApp()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382C17.015 14.155 14.766 13.047 14.347 12.894C13.928 12.742 13.623 12.666 13.318 13.123C13.013 13.58 12.15 14.593 11.883 14.898C11.616 15.203 11.349 15.241 10.892 15.013C10.435 14.785 8.966 14.305 7.22 12.748C5.86 11.536 4.943 10.039 4.676 9.582C4.409 9.125 4.647 8.878 4.876 8.65C5.082 8.445 5.334 8.113 5.563 7.846C5.792 7.579 5.868 7.389 6.02 7.084C6.172 6.779 6.096 6.512 5.982 6.284C5.868 6.056 4.954 3.81 4.573 2.895C4.202 2.002 3.826 2.122 3.548 2.108C3.284 2.095 2.979 2.095 2.674 2.095C2.369 2.095 1.874 2.21 1.455 2.667C1.036 3.124 0.16 3.948 0.16 5.623C0.16 7.298 1.379 8.916 1.55 9.145C1.721 9.374 3.953 12.808 7.37 14.283C8.183 14.634 8.814 14.843 9.311 15.001C10.126 15.26 10.867 15.224 11.455 15.136C12.112 15.038 13.473 14.312 13.753 13.526C14.033 12.74 14.033 12.071 13.949 11.928C13.865 11.785 13.56 11.709 13.103 11.482V11.482Z" fill="currentColor"/>
+          </svg>
+          Enviar Brief Completado
+        </button>
+        <p class="footer-text">Al tocar el botón se abrirá WhatsApp con todas las respuestas formateadas para Sistémica Digital.</p>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script>
+    function sendToWhatsApp() {
+      const q1 = document.getElementById('q1').value.trim();
+      const q2 = document.getElementById('q2').value.trim();
+      const q3 = document.getElementById('q3').value.trim();
+      const q4 = document.getElementById('q4').value.trim();
+      const q5 = document.getElementById('q5').value.trim();
+      const q6 = document.getElementById('q6').value.trim();
+      const q7 = document.getElementById('q7').value.trim();
+      const q8 = document.getElementById('q8').value.trim();
+      const q9 = document.getElementById('q9').value.trim();
+      const q10 = document.getElementById('q10').value.trim();
+      const q11 = document.getElementById('q11').value.trim();
+      const q12 = document.getElementById('q12').value.trim();
+      const q13 = document.getElementById('q13').value.trim();
+
+      if(!q1 || !q2 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q11 || !q12 || !q13) {
+        alert('Por favor completá los campos obligatorios antes de enviar.');
+        return;
+      }
+
+      let text = `*BRIEF ESTRATÉGICO - SISTÉMICA DIGITAL*\n\n`;
+      text += `*1. DATOS DEL NEGOCIO*\n`;
+      text += `• Marca/Responsable: ${q1}\n`;
+      text += `• WhatsApp/Email: ${q2}\n`;
+      text += `• Redes/Web: ${q3 || 'No especificado'}\n`;
+      text += `• Zona/Horario: ${q4}\n\n`;
+
+      text += `*2. OFERTA Y SERVICIO*\n`;
+      text += `• Servicio prioritario: ${q5}\n`;
+      text += `• Ticket promedio: ${q6}\n`;
+      text += `• Oferta gancho: ${q7}\n\n`;
+
+      text += `*3. CLIENTE Y COMPETENCIA*\n`;
+      text += `• Cliente ideal: ${q8}\n`;
+      text += `• Diferencial: ${q9}\n`;
+      text += `• Competencia: ${q10 || 'No especificado'}\n\n`;
+
+      text += `*4. PROCESO COMERCIAL E INVERSIÓN*\n`;
+      text += `• Atención/Respuesta: ${q11}\n`;
+      text += `• Exp. Meta Ads: ${q12}\n`;
+      text += `• Presupuesto mensual: ${q13}`;
+
+      const phone = '5492213637222';
+      const encodedText = encodeURIComponent(text);
+      const waUrl = `https://wa.me/${phone}?text=${encodedText}`;
+
+      window.open(waUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
